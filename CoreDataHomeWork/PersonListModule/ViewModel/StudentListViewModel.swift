@@ -19,6 +19,7 @@ final class StudentListViewModel: PersonListViewModelProtocol {
             updateClosure?()
         }
     }
+    
     func loadInfo() {
         DispatchQueue.main.async {
             self.entityArray = CoreDataService.getStudents()
@@ -59,5 +60,4 @@ final class StudentListViewModel: PersonListViewModelProtocol {
     func selectEntity(index: Int) {
         coordinator?.showStudentDetails(student: entityArray[index])
     }
-    
 }

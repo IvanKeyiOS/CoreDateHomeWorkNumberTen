@@ -22,7 +22,7 @@ class AddTeacherViewModel: AddTeacherViewModelProtocol {
             newTeacher.lastname = lastname
             CoreDataService.saveContext()
         }
+        
         coordinator?.popToPrevious()
     }
-    
 }

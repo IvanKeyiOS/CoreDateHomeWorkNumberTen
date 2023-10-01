@@ -15,14 +15,12 @@ final class StudentDetailViewController: UIViewController {
     
     var viewModel: StudentDetailsViewModelProtocol?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadUI()
     }
     
-
     private func loadUI() {
         let name = TextDecoration.getDecoratedString(firstWord: "Name: ",secondWordString: viewModel?.student.name, style: .details)
         let age = TextDecoration.getDecoratedString(firstWord: "Age: ",secondWordInt: viewModel?.student.age, style: .details)
@@ -32,5 +30,4 @@ final class StudentDetailViewController: UIViewController {
         ageLabel.attributedText = age
         teacherLabel.attributedText = teacher
     }
-    
 }

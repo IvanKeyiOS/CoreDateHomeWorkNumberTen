@@ -32,5 +32,4 @@ final class AddStudentViewModel: AddStudentViewModelProtocol {
     func addTeacher() {
         coordinator?.showTeachers(state: TeachersViewModelState.AddTeacherToStudent)
     }
-    
 }

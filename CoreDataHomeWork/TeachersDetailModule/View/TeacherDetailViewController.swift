@@ -44,6 +44,4 @@ extension TeacherDetailViewController: UITableViewDelegate, UITableViewDataSourc
         cell.labelText.attributedText = viewModel?.cellData(index: indexPath.row)
         return cell
     }
-    
-    
 }

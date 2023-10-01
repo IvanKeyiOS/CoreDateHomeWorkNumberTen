@@ -35,6 +35,7 @@ final class CoreDataService {
             }
         }
     }
+    
     static func getStudents() -> [StudentModel] {
         var studentsArray: [StudentModel] = []
         let request = Student.fetchRequest()
@@ -46,6 +47,7 @@ final class CoreDataService {
         }
         return studentsArray
     }
+    
     static func getTeachers() -> [TeacherModel] {
         var teachersArray: [TeacherModel] = []
         let request = Teacher.fetchRequest()
@@ -56,6 +58,7 @@ final class CoreDataService {
         }
         return teachersArray
     }
+    
     static func getStudentsArray(index: Int) -> [StudentModel] {
         var studentsArray: [StudentModel] = []
         let request = Teacher.fetchRequest()
@@ -66,6 +69,7 @@ final class CoreDataService {
         return studentsArray
         
     }
+    
     static func saveStudent(name: String, age: Int16, teacherId: Int) {
         context.performAndWait {
             let newStudent = Student(context: context)

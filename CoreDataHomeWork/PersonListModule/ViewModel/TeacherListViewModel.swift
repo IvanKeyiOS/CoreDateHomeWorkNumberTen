@@ -12,7 +12,6 @@ enum TeachersViewModelState {
     case AddTeacherToStudent
 }
 
-
 final class TeacherListViewModel: PersonListViewModelProtocol {
     
     //MARK: - Variables
@@ -61,7 +60,6 @@ final class TeacherListViewModel: PersonListViewModelProtocol {
             case .AddTeacherToStudent:
                 self.coordinator?.showAddTeacher(state: .AddTeacherToStudent)
         }
-        
     }
     
     func cellData(index: Int) -> NSAttributedString {

@@ -34,6 +34,7 @@ final class TextDecoration {
                 } else {
                     fullString = NSMutableAttributedString(string: (firstWord ?? "") + " " + (secondWordString ?? ""))
                 }
+        
         let fullLength = NSRange(location: 0, length: fullString.length)
         let nameRange = NSRange(location: 0, length: firstWord?.count ?? 0)
         fullString.addAttributes([.font: lastnameFont, .foregroundColor: UIColor.black], range: fullLength)

@@ -18,7 +18,6 @@ class PersonCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-        
     }
     
     func showStudents() {
@@ -30,6 +29,7 @@ class PersonCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
     }
+    
     func showTeachers(state: TeachersViewModelState) {
         let storyboard = UIStoryboard(name: "PersonListStoryboard", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "PersonListViewController") as? PersonListViewController else { return }
@@ -84,12 +84,14 @@ class PersonCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         updateClosure?()
         navigationController.popToViewController(navigationController.viewControllers[1], animated: true)
     }
+    
     func popToStudents(teacher: TeacherModel, teacherId: Int) {
         let vc = navigationController.viewControllers[2] as? AddStudentViewController
         vc?.viewModel?.teacherId = teacherId
         vc?.viewModel?.teacher = teacher
         navigationController.popToViewController(navigationController.viewControllers[2], animated: true)
     }
+    
     func popToTeachers() {
         navigationController.popToViewController(navigationController.viewControllers[3], animated: true)
     }

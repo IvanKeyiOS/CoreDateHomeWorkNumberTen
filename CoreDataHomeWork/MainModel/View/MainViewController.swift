@@ -24,5 +24,4 @@ final class MainViewController: UIViewController {
     @IBAction func teachersButtonAction(_ sender: Any) {
         viewModel?.switchToTeachers()
     }
-    
 }

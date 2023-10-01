@@ -18,12 +18,11 @@ extension Teacher {
     @NSManaged public var name: String?
     @NSManaged public var lastname: String?
     @NSManaged public var students: NSSet
-
 }
 
 // MARK: Generated accessors for students
 extension Teacher {
-
+    
     @objc(addStudentsObject:)
     @NSManaged public func addToStudents(_ value: Student)
 
@@ -35,7 +34,6 @@ extension Teacher {
 
     @objc(removeStudents:)
     @NSManaged public func removeFromStudents(_ values: NSSet)
-
 }
 
 extension Teacher : Identifiable {
