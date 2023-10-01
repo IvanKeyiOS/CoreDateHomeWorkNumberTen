@@ -60,7 +60,6 @@ final class PersonListViewController: UIViewController {
     @objc private func addEntity(_ sender: UIButton) {
         viewModel?.switchToAddEntity()
     }
-
 }
 
 extension PersonListViewController: UITableViewDataSource {
@@ -73,19 +72,20 @@ extension PersonListViewController: UITableViewDataSource {
         cell.labelText.attributedText = viewModel?.cellData(index: indexPath.row)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             viewModel?.removeEntity(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.selectEntity(index: indexPath.row)
     }
 }
 
 extension PersonListViewController: UITableViewDelegate {
-    
 }
 
 

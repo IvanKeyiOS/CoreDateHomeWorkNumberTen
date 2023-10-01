@@ -36,9 +36,11 @@ final class AddStudentViewController: UIViewController {
     @IBAction private func chooseTeacherAction(_ sender: Any) {
         viewModel?.addTeacher()
     }
+    
     @IBAction private func saveButtonAction(_ sender: Any) {
         viewModel?.addStudent(name: nameTextField.text ?? "", age: Int16(ageTextField.text ?? "") ?? 0)
     }
+    
     private func bindViewModel() {
         viewModel?.updateClosure = { [weak self] in
             let label = ("Selected: \(self?.viewModel?.teacher.name ?? "") \(self?.viewModel?.teacher.lastname ?? "")")

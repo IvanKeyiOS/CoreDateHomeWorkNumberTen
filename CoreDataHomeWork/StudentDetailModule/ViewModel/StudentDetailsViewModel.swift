@@ -19,5 +19,4 @@ final class StudentDetailsViewModel: StudentDetailsViewModelProtocol {
     init(student: StudentModel) {
         self.student = student
     }
-        
 }

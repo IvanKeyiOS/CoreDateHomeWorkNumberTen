@@ -38,5 +38,4 @@ final class TeacherDetailViewModel: TeacherDetailViewModelProtocol {
         let cellDataString = TextDecoration.getDecoratedString(firstWord: studentsArray[index].name, secondWordInt: studentsArray[index].age, style: .list)
         return cellDataString
     }
-    
 }
