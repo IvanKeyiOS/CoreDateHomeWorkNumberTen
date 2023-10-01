@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MainViewController" customModule="CoreDataHomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="nGj-lz-KiK">
+                                <rect key="frame" x="16" y="109" width="361" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8Z-Ea-lw1">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="L51-xN-vpZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Students">
+                                            <backgroundConfiguration key="background" cornerRadius="0.0">
+                                                <color key="backgroundColor" red="0.60321744079999995" green="0.31274103510000001" blue="0.80330650250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="studentsButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3vG-1r-DCC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Z3-44-vEM">
+                                        <rect key="frame" x="0.0" y="54" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hr4-BQ-kb8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Teachers">
+                                            <backgroundConfiguration key="background" cornerRadius="0.0">
+                                                <color key="backgroundColor" red="0.60321744079999995" green="0.31274103510000001" blue="0.80330650250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="teachersButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2gF-kv-Gor"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Z3-44-vEM" firstAttribute="leading" secondItem="nGj-lz-KiK" secondAttribute="leading" id="1Fg-kK-m5Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="E8Z-Ea-lw1" secondAttribute="bottom" constant="54" id="G2b-Ye-TbU"/>
+                                    <constraint firstItem="6Z3-44-vEM" firstAttribute="centerX" secondItem="nGj-lz-KiK" secondAttribute="centerX" id="KQQ-GP-tKK"/>
+                                    <constraint firstAttribute="trailing" secondItem="E8Z-Ea-lw1" secondAttribute="trailing" id="MLt-Zr-WGh"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Z3-44-vEM" secondAttribute="trailing" id="Ygf-eU-Mkk"/>
+                                    <constraint firstItem="6Z3-44-vEM" firstAttribute="top" secondItem="E8Z-Ea-lw1" secondAttribute="bottom" constant="14" id="aL3-HW-jJA"/>
+                                    <constraint firstItem="E8Z-Ea-lw1" firstAttribute="leading" secondItem="nGj-lz-KiK" secondAttribute="leading" id="knF-WL-UFa"/>
+                                    <constraint firstItem="E8Z-Ea-lw1" firstAttribute="top" secondItem="nGj-lz-KiK" secondAttribute="top" id="uzh-3f-5T9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nGj-lz-KiK" secondAttribute="trailing" constant="16" id="Eau-mp-ofd"/>
+                            <constraint firstItem="nGj-lz-KiK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="dZh-v9-cjB"/>
+                            <constraint firstItem="nGj-lz-KiK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="qVO-be-3Ny"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Teacher View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddTeacherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AddTeacherViewController" customModule="CoreDataHomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZt-6c-dN0">
+                                <rect key="frame" x="8" y="66.999999999999986" width="377" height="148.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld0-hD-Ldp">
+                                        <rect key="frame" x="8" y="7.9999999999999982" width="45" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E7k-vP-wyO">
+                                        <rect key="frame" x="8" y="36.333333333333329" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-Xt-tH1">
+                                        <rect key="frame" x="8" y="78.333333333333343" width="74.666666666666671" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A30-Lr-yae">
+                                        <rect key="frame" x="8" y="106.66666666666666" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZKW-Xt-tH1" firstAttribute="leading" secondItem="Ld0-hD-Ldp" secondAttribute="leading" id="2dE-6s-g1F"/>
+                                    <constraint firstItem="Ld0-hD-Ldp" firstAttribute="top" secondItem="TZt-6c-dN0" secondAttribute="top" constant="8" id="6LA-xB-b5q"/>
+                                    <constraint firstItem="A30-Lr-yae" firstAttribute="leading" secondItem="E7k-vP-wyO" secondAttribute="leading" id="7EM-az-5Ku"/>
+                                    <constraint firstItem="ZKW-Xt-tH1" firstAttribute="top" secondItem="E7k-vP-wyO" secondAttribute="bottom" constant="8" id="NWv-lC-uWd"/>
+                                    <constraint firstItem="A30-Lr-yae" firstAttribute="trailing" secondItem="E7k-vP-wyO" secondAttribute="trailing" id="SKt-TG-Sck"/>
+                                    <constraint firstAttribute="trailing" secondItem="E7k-vP-wyO" secondAttribute="trailing" constant="8" id="WZ1-f9-dwt"/>
+                                    <constraint firstItem="E7k-vP-wyO" firstAttribute="top" secondItem="Ld0-hD-Ldp" secondAttribute="bottom" constant="8" id="hKR-DV-8v2"/>
+                                    <constraint firstItem="Ld0-hD-Ldp" firstAttribute="leading" secondItem="TZt-6c-dN0" secondAttribute="leading" constant="8" id="j6S-sU-RLg"/>
+                                    <constraint firstItem="A30-Lr-yae" firstAttribute="top" secondItem="ZKW-Xt-tH1" secondAttribute="bottom" constant="8" id="oFY-M6-R8M"/>
+                                    <constraint firstItem="E7k-vP-wyO" firstAttribute="leading" secondItem="Ld0-hD-Ldp" secondAttribute="leading" id="qql-lt-amz"/>
+                                    <constraint firstAttribute="bottom" secondItem="A30-Lr-yae" secondAttribute="bottom" constant="8" id="tSW-rv-yip"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-Fs-23N">
+                                <rect key="frame" x="8" y="223.66666666666666" width="377" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZH-4b-b7W">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                            <backgroundConfiguration key="background" cornerRadius="0.0">
+                                                <color key="backgroundColor" red="0.60321744079999995" green="0.31274103510000001" blue="0.80330650250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n6D-IS-Fvj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QAx-Fs-23N" firstAttribute="leading" secondItem="TZt-6c-dN0" secondAttribute="leading" id="9HW-tL-9fy"/>
+                            <constraint firstItem="QAx-Fs-23N" firstAttribute="trailing" secondItem="TZt-6c-dN0" secondAttribute="trailing" id="Fau-Y4-gfV"/>
+                            <constraint firstItem="TZt-6c-dN0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="HR4-YD-DZI"/>
+                            <constraint firstItem="TZt-6c-dN0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Jmp-LK-ltz"/>
+                            <constraint firstItem="QAx-Fs-23N" firstAttribute="top" secondItem="A30-Lr-yae" secondAttribute="bottom" constant="16" id="TTw-fY-5Ge"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TZt-6c-dN0" secondAttribute="trailing" constant="8" id="mDT-2R-3Az"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lastnameTextField" destination="A30-Lr-yae" id="B7c-SL-ASy"/>
+                        <outlet property="nameTextField" destination="E7k-vP-wyO" id="WMB-M3-KUH"/>
+                        <outlet property="saveButtonOutlet" destination="tZH-4b-b7W" id="TPj-UA-QtQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.458015267175568" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
